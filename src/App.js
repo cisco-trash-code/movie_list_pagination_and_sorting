@@ -10,7 +10,7 @@ class App extends Component {
   render() { 
     return ( 
       <div className='container-fluid'>
-        <div className='col=4'>
+        <div className='col-4'>
           <List list={this.state.list}/>
         </div>
       </div>
