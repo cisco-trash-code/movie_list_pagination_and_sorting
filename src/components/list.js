@@ -14,13 +14,15 @@ const List = props => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>aaa</td>
-                    <td>bbb</td>
-                    <td>ccc</td>
-                    <td>ddd</td>
-                    <td>eee</td>
+                {list.map(movie => 
+                    <tr key={movie.id}>
+                    <td>{movie.name}</td>
+                    <td>{movie.genre}</td>
+                    <td>{movie.year}</td>
+                    <td>{movie.rate}</td>
+                    <td><button className='btn btn-danger btn-sm m-2'>Delete</button></td>
                 </tr>
+                    )}
             </tbody>
         </table>
      );
