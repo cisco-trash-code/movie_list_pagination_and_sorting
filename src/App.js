@@ -11,10 +11,14 @@ class App extends Component {
     return ( 
       <div className='container-fluid'>
         <div className='col-4'>
-          <List list={this.state.list}/>
+          <List onDelete={this.handleDelete} list={this.state.list}/>
         </div>
       </div>
      );
+  }
+  handleDelete = movieId => {
+    const list = this.state.list.filter(movie => movie.id !== movieId);
+    this.setState({ list })
   }
 }
  

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const List = props => {
-    const { list } = props;
+    const { list , onDelete } = props;
     return ( 
         <table className='table'>
             <thead className='thead-dark'>
@@ -20,7 +20,7 @@ const List = props => {
                     <td>{movie.genre}</td>
                     <td>{movie.year}</td>
                     <td>{movie.rate}</td>
-                    <td><button className='btn btn-danger btn-sm m-2'>Delete</button></td>
+                    <td><button onClick={()=> onDelete(movie.id)} className='btn btn-danger btn-sm m-2'>Delete</button></td>
                 </tr>
                     )}
             </tbody>
